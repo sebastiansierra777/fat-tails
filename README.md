@@ -79,13 +79,6 @@ These deviations illustrate why Gaussian models underestimate real-world market 
 
 ---
 
-### 4. Why This Matters for Risk Modeling
-Assuming normality **underestimates the probability of extreme events**.
-
-For example:
-- A \(4\sigma\) daily move under a normal distribution should occur about onc
-
-
 ## 🚀 Installation
 
 ### Prerequisites
