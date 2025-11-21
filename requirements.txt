@@ -1,0 +1,13 @@
+# Data science core
+  numpy==2.3.4
+  pandas==2.3.3
+
+# Visualization
+  matplotlib==3.10.6
+  seaborn==0.13.2
+
+# Statistical analysis
+  statsmodels==0.14.5
+  scipy==1.15.3
+  scikit-learn==1.7.2
+
