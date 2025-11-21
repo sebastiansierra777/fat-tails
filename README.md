@@ -106,8 +106,7 @@ Cleaned and preprocessed versions of these files are saved in data/processed/ an
 
 **Sebastian Sierra Garcia**
 
-- GitHub: [@sebastiansierra777]
-- (https://github.com/sebastiansierra777)
+- GitHub: https://github.com/sebastiansierra777
 
 ## 📝 Notes
 
