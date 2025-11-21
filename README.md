@@ -25,14 +25,14 @@ with theoretical expectations.
 In the end, these stocks will exhibit fat-tail behaviour that deviates from the Normal Distribution, 
 supporting the views of Mandelbrot and Taleb on markets and finance.
 
-## 📘 Methodology
+## 📘 Methodology 
 
 ### 1. Log-Returns
 Daily log-returns are computed as:
 
-\[
+$$
 r_t = \ln\left(\frac{P_t}{P_{t-1}}\right)
-\]
+$$
 
 Log-returns are used because they are time-additive, approximately normal under classical models, and standard in quantitative finance. All analysis is based on these log-returns.
 
@@ -41,35 +41,37 @@ Log-returns are used because they are time-additive, approximately normal under 
 ### 2. Fitted Normal Distribution
 A normal distribution is fitted to each return series using maximum likelihood. For the Gaussian case:
 
-\[
+$$
 \hat{\mu} = \frac{1}{n}\sum_{t=1}^n r_t,
 \qquad
 \hat{\sigma} = \sqrt{\frac{1}{n}\sum_{t=1}^n (r_t - \hat{\mu})^2}
-\]
+$$
 
 The fitted normal probability density function is:
 
-\[
-f_{\text{normal}}(x)=\frac{1}{\hat{\sigma}\sqrt{2\pi}}
+$$
+f_{\text{normal}}(x)
+= \frac{1}{\hat{\sigma}\sqrt{2\pi}}
 \exp\left(-\frac{(x-\hat{\mu})^2}{2\hat{\sigma}^2}\right)
-\]
+$$
 
 Plotting this curve alongside the empirical histogram shows how real returns deviate from the Gaussian benchmark.
 
 ---
 
 ### 3. Empirical Distribution and Fat Tails
-The empirical distribution is estimated with a normalized histogram (`density=True`).  
+The empirical distribution is estimated using a normalized histogram (`density=True`).  
 Financial returns typically exhibit **fat tails**, meaning:
 
-\[
-\Pr(|r_t| > k\hat{\sigma}) \gg
-\Pr_{\mathcal{N}(\hat{\mu},\hat{\sigma}^2)}(|X| > k\hat{\sigma})
-\]
+$$
+\Pr(|r_t| > k\hat{\sigma})
+\;\gg\;
+\Pr_{\mathcal{N}(\hat{\mu},\,\hat{\sigma}^2)}(|X| > k\hat{\sigma})
+$$
 
 In practice:
 
-- Extreme gains and losses occur far more frequently than the normal model predicts  
+- Extreme gains and losses occur far more frequently than the Gaussian model predicts  
 - The empirical histogram lies above the normal PDF in both tails  
 - Sample kurtosis is typically greater than 3 (leptokurtosis)
 
@@ -81,16 +83,8 @@ These deviations illustrate why Gaussian models underestimate real-world market 
 Assuming normality **underestimates the probability of extreme events**.
 
 For example:
-- A \(4\sigma\) move under a normal distribution should occur roughly once every 63 years  
-- In real markets, such moves can appear several times per decade  
-- Gaussian-based measures such as VaR can therefore be overly optimistic  
+- A \(4\sigma\) daily move under a normal distribution should occur about onc
 
-Fat tails imply:
-- higher real-world volatility,  
-- more frequent extreme shocks,  
-- and the need for models that account for non-Gaussian behavior.
-
-This project highlights these effects by visually comparing fitted Gaussian curves with empirical return data for multiple well-known stocks.
 
 ## 🚀 Installation
 
