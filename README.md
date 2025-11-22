@@ -16,7 +16,7 @@ overlaid with the probability density functions of their fitted normal distribut
 
 ## 🎯 Overview
 
-This project analyzes the daily log-returns of major tech stocks: Palantir, Tesla, NVIDIA, Broadcom, Meta, Microsoft, and Apple. 
+This project analyzes the daily log-returns of major tech stocks: Palantir, Tesla & NVIDIA.
 
 Using Python, I will build empirical histograms from these daily log-returns and compare them against their 
 overlaid fitted normal distribution probability density functions, with the goal of contrasting the observed empirical results 
@@ -132,14 +132,6 @@ python src/tesla.py
 python src/tesla_graph.py
 python src/nvidia.py
 python src/nvidia_graph.py
-python src/broadcom.py
-python src/broadcom_graph.py
-python src/meta.py
-python src/meta_graph.py
-python src/microsoft.py
-python src/microsoft_graph.py
-python src/apple.py
-python src/apple_graph.py
 ```
 
 ## 📊 Data Sources
