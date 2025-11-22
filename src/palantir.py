@@ -3,13 +3,12 @@
 import pandas as pd
 import numpy as np
 from pathlib import Path
-
-from patsy import desc
 from scipy.stats import skew, kurtosis
 import openpyxl
 
 # Establish Excel Path
-excel_path = Path(r"C:\Users\sebas\Documents\Python\Python Projects\fat_tails\data\processed\fat_tails.xlsx")
+ROOT = Path(__file__).resolve().parent.parent
+excel_path = ROOT / "data" / "processed" / "fat_tails.xlsx"
 
 # Load the data
 df = pd.read_excel(excel_path, sheet_name="palantir")
