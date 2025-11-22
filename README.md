@@ -127,12 +127,19 @@ fat-tails/
 **After installation, and with the environment activated, run any stock-specific script from the project root**
 ```bash
 python src/palantir.py
+python src/palantir_graph.py
 python src/tesla.py
+python src/tesla_graph.py
 python src/nvidia.py
+python src/nvidia_graph.py
 python src/broadcom.py
+python src/broadcom_graph.py
 python src/meta.py
+python src/meta_graph.py
 python src/microsoft.py
+python src/microsoft_graph.py
 python src/apple.py
+python src/apple_graph.py
 ```
 
 ## 📊 Data Sources
