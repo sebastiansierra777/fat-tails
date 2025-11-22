@@ -19,14 +19,6 @@ ENV/
 # PyCharm
 .idea/
 
-# Data files
-*.csv
-*.xlsx
-*.xls
-*.db
-*.sqlite
-data/
-
 # OS
 .DS_Store
 Thumbs.db
