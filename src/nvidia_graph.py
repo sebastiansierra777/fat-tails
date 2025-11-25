@@ -1,5 +1,5 @@
 # %%--------------------------------------------------------------------
-# TESLA HISTOGRAM + NORMAL PDF OVERLAY
+# NVIDIA HISTOGRAM + NORMAL PDF OVERLAY
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent
 excel_path = ROOT / "data" / "processed" / "fat_tails.xlsx"
 
 # Load the data
-df = pd.read_excel(excel_path, sheet_name="tesla_log")
+df = pd.read_excel(excel_path, sheet_name="nvidia_log")
 
 # Extract the log-return series into a Numpy array
 returns = df['log_return'].dropna().values
@@ -42,9 +42,9 @@ ax.plot(x,
         label=fr"Fitted Normal Density ($\mu={mu:.4f}$, $\sigma={sigma:.4f}$)"
 )
 
-ax.set_xlabel("Tesla Daily Log Returns", fontsize=12)
+ax.set_xlabel("Nvidia Daily Log Returns", fontsize=12)
 ax.set_ylabel("Probability Density", fontsize=12)
-ax.set_title("TSLA: Empirical Distribution vs Fitted Normal Density", fontsize=14)
+ax.set_title("NVDA: Empirical Distribution vs Fitted Normal Density", fontsize=14)
 
 # Legend
 ax.legend(frameon=False, loc="best")
@@ -64,5 +64,3 @@ fig.tight_layout()
 # fig.savefig(ROOT / "figures" / "nvda_hist_fitted_normal.png", bbox_inches="tight")
 
 plt.show()
-
-
